@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- EDIT: Browser tab title -->
+<title>ClearQuote — Compare Insurance Quotes in Minutes</title>
+<!-- EDIT: Search / share description -->
+<meta name="description" content="ClearQuote compares real insurance rates from 100+ top insurers. Auto, home, renters, life and business — free forever, no spam calls.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <!-- EDIT: Brand -->
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="ClearQuote logo" width="36" height="36"><span>ClearQuote</span></a>
+    <nav class="topnav" aria-label="Coverage">
+      <a href="#coverage">Auto</a>
+      <a href="#coverage">Home</a>
+      <a href="#coverage">Renters</a>
+      <a href="#coverage">Life</a>
+      <a href="#coverage">Business</a>
+    </nav>
+    <div class="top-cta">
+      <!-- EDIT: Phone number -->
+      <a class="phone" href="tel:+15551234567">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        (555) 123-4567</a>
+      <a class="btn small" href="#quote">Get quotes</a>
+    </div>
+    <button class="burger" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.webp" aria-hidden="true">
+    <source src="assets/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-in">
+    <!-- EDIT: Kicker -->
+    <p class="kicker rv">Insurance comparison, minus the headache</p>
+    <!-- EDIT: Main headline -->
+    <h1 class="rv">Compare insurance quotes<br>in <em>minutes</em>, not days.</h1>
+    <!-- EDIT: Sub-headline -->
+    <p class="lead rv">Real rates from 100+ top insurers side by side. Free forever — and we never sell your data.</p>
+
+    <!-- EDIT: Quote widget -->
+    <form class="quote-box rv" id="quote">
+      <label>
+        <span>Coverage</span>
+        <select id="q-type" aria-label="Coverage type">
+          <option>Auto insurance</option>
+          <option>Home insurance</option>
+          <option>Renters insurance</option>
+          <option>Life insurance</option>
+          <option>Business insurance</option>
+        </select>
+      </label>
+      <label>
+        <span>ZIP code</span>
+        <input id="q-zip" inputmode="numeric" maxlength="5" placeholder="e.g. 78701" aria-label="ZIP code">
+      </label>
+      <button class="btn big" type="submit">Compare quotes</button>
+      <p class="micro">
+        <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>No junk mail
+        <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>No spam calls
+        <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>100% free
+      </p>
+    </form>
+    <div class="quote-result" id="quote-result" hidden></div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAND ============ -->
+<div class="trust">
+  <div class="wrap trust-in rv">
+    <div><b data-count="2">0</b><span>M+ quotes compared</span></div>
+    <div><b>4.8/5</b><span>from 12,400+ reviews</span></div>
+    <div><b data-count="100">0</b><span>+ insurers compared</span></div>
+    <div><b data-count="50">0</b><span>states licensed</span></div>
+  </div>
+</div>
+
+<!-- ============ COVERAGE ============ -->
+<section class="section" id="coverage">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Coverage</p>
+      <h2>Every policy you need.<br>One honest comparison.</h2>
+      <p>Pick a line to see how it works — every quote shows the same coverage side by side, so you're comparing apples to apples.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv">
+        <div class="card-pic"><img src="assets/cover-auto.webp" alt="Car driving on a highway at sunset" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Auto insurance</h3>
+          <p>Liability, collision, and comprehensive — tuned to your car, your mileage, your record.</p>
+          <span class="from">Drivers save $612/yr on average*</span>
+          <a class="link" href="#quote">Compare auto quotes →</a>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="card-pic"><img src="assets/cover-home.webp" alt="Family home at golden hour" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Home insurance</h3>
+          <p>Dwelling, belongings, and liability — including flood and earthquake options where it matters.</p>
+          <span class="from">Homeowners save $418/yr on average*</span>
+          <a class="link" href="#quote">Compare home quotes →</a>
+        </div>
+      </article>
+      <article class="card rv">
+        <div class="card-pic"><img src="assets/cover-business.webp" alt="Small business owner in a coffee shop" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Business insurance</h3>
+          <p>General liability, professional liability, and workers' comp — by profession, not jargon.</p>
+          <span class="from">Get covered in under 10 minutes</span>
+          <a class="link" href="#quote">Compare business quotes →</a>
+        </div>
+      </article>
+    </div>
+    <div class="mini-cards rv">
+      <a href="#quote"><b>Renters</b><span>from $5/mo</span></a>
+      <a href="#quote"><b>Life</b><span>from $11/mo</span></a>
+      <a href="#quote"><b>Pet</b><span>from $9/mo</span></a>
+      <a href="#quote"><b>Umbrella</b><span>extra liability</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section alt" id="how">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">How it works</p>
+      <h2>Three steps. Zero sales calls.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="n">01</span><h3>Tell us the basics</h3><p>Coverage type and ZIP code. That's all we need to start — no phone number required.</p></div>
+      <div class="step rv"><span class="n">02</span><h3>Compare real quotes</h3><p>Live rates from 100+ insurers, normalized to identical coverage so the cheapest is truly the cheapest.</p></div>
+      <div class="step rv"><span class="n">03</span><h3>Pick & save</h3><p>Buy online in minutes or call a licensed agent. Either way, the price you see is the price you pay.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="kicker">Reviews</p>
+      <h2>People who switched<br>and saved.</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote rv">
+        <blockquote>"I compared six insurers over lunch and switched the same afternoon. Saving $612 a year on my auto policy."</blockquote>
+        <figcaption><b>Marc T.</b><span>Austin, TX · Auto · saved $612/yr</span></figcaption>
+      </figure>
+      <figure class="quote rv">
+        <blockquote>"No phone calls, no pressure. The side-by-side view made it obvious my old insurer was overcharging me."</blockquote>
+        <figcaption><b>Priya S.</b><span>Denver, CO · Home · saved $418/yr</span></figcaption>
+      </figure>
+      <figure class="quote rv">
+        <blockquote>"Got my café insured between the morning rush and lunch. The certificate was in my inbox in ten minutes."</blockquote>
+        <figcaption><b>Daniel R.</b><span>Portland, OR · Business</span></figcaption>
+      </figure>
+    </div>
+    <p class="fine rv">*Average savings based on a 2026 survey of 4,200 customers who switched. Individual results vary.</p>
+  </div>
+</section>
+
+<!-- ============ TRANSPARENCY FAQ ============ -->
+<section class="section alt" id="faq">
+  <div class="wrap narrow">
+    <div class="sec-head rv">
+      <p class="kicker">Transparency</p>
+      <h2>How we make money,<br>honestly.</h2>
+      <p>Comparison sites have a trust problem. Here's exactly how ours works.</p>
+    </div>
+    <div class="faq">
+      <div class="faq-item rv">
+        <button class="faq-q">Is ClearQuote really free?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Yes. We're paid a standard commission by the insurer you choose — the same commission any agent earns. It never changes the prices you see.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Do you sell my data?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Never. We don't sell your information to lead generators or call centers. That's why you get quotes without a single spam call.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Are the quotes real prices?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>They're real estimates based on the details you provide. Final price is confirmed by the insurer before you pay — and it matches what we showed you.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Can I talk to a human?<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><p>Anytime. Licensed agents are available at (555) 123-4567, 8 AM – 8 PM CT, seven days a week. No scripts, no upsells.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="band">
+  <div class="wrap rv">
+    <h2>Stop overpaying for insurance.</h2>
+    <p>Two minutes, zero spam. See what you should really be paying.</p>
+    <a class="btn big light" href="#quote">Compare quotes — it's free</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top"><img src="assets/logo.png" alt="ClearQuote logo" width="32" height="32"><span>ClearQuote</span></a>
+        <p class="muted">The honest way to compare insurance.<br>Licensed in all 50 states. License #CQ-2026-001.</p>
+      </div>
+      <div>
+        <h4>Coverage</h4>
+        <a href="#coverage">Auto</a><a href="#coverage">Home</a><a href="#coverage">Renters</a><a href="#coverage">Life</a><a href="#coverage">Business</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#how">How it works</a><a href="#reviews">Reviews</a><a href="#faq">Transparency</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+15551234567">(555) 123-4567</a>
+        <a href="mailto:hello@clearquote.example">hello@clearquote.example</a>
+        <span class="muted">8 AM – 8 PM CT, daily</span>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr"></span> ClearQuote. All rights reserved.</span>
+      <span>Concept demo — placeholder content. Not a licensed insurer.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
